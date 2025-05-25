@@ -35,17 +35,17 @@
       <div class="header_section">
          <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+               <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('P/Profusion-1.0.0/images/logo.png') }}"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{{ url('/index') }}">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="{{ url('/about') }}">About</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
@@ -192,7 +192,7 @@
                   <div class="col-sm-12">
                      <h1 class="about_taital">About Our dance studio</h1>
                      <p class="about_text">English. Many desktop publishing <br>packages and web page editors now use Lorem Ipsum as their default model text, and a search </p>
-                     <div class="about_img"><img src="images/about-img.png"></div>
+                     <img src="{{ asset('./P/Profusion-1.0.0/images/about-img.png') }}" alt="About Image">
                      <p class="about_text_1">using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
                      <div class="readmore_bt"><a href="#">Read More</a></div>
                   </div>
