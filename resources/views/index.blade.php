@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- site metas -->
-   <title>Profusion</title>
+   <title>Tutorly</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -71,8 +71,7 @@
      <div class="banner_section layout_padding">
    <div class="container">
       <!-- Banner Image -->
-      <img src="{{ asset('./P/Profusion-1.0.0/images/banner-img.png') }}" class="banner_img" alt="Banner Image">
-
+      <img src="{{ asset('P/Profusion-1.0.0/images/tutor_banner.jpg ') }}" class="banner_img" alt="Banner Image" style="opacity:0.8;">
       <!-- Bootstrap Carousel -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
          <!-- Carousel Indicators -->
@@ -88,7 +87,7 @@
             <div class="carousel-item active">
                <div class="row">
                   <div class="col-sm-12">
-                     <h1 class="banner_taital">Start Dance</h1>
+                     <h1 class="banner_taital">Start From Now</h1>
                      <div class="contact_bt"><a href="{{ url('contact.html') }}">Read More</a></div>
                   </div>
                </div>
@@ -189,13 +188,22 @@
          <div class="container">
             <div class="about_main">
                <div class="row">
+
                   <div class="col-sm-12">
                      <h1 class="about_taital">About Our dance studio</h1>
                      <p class="about_text">English. Many desktop publishing <br>packages and web page editors now use Lorem Ipsum as their default model text, and a search </p>
-                     <img src="{{ asset('./P/Profusion-1.0.0/images/about-img.png') }}" alt="About Image">
                      <p class="about_text_1">using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                     <br>
+
+                    <div style="text-align: center; margin: 24px 0;">
+                        <img src="{{ asset('P/Profusion-1.0.0/images/forparent.png') }}" alt="For Parent"
+                            style="max-width:500px; width:100%; height:auto; display:inline-block;">
+                    </div>
+
                      <div class="readmore_bt"><a href="#">Read More</a></div>
                   </div>
+
+
                </div>
             </div>
          </div>

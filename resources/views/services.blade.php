@@ -65,15 +65,25 @@
             <h1 class="service_taital">Our Classes</h1>
             <div class="service_section_2 layout_padding">
                <div class="owl-carousel owl-theme">
-                  @foreach(['Rock', 'Hip Hop', 'Style', 'Rock', 'Rock', 'Hip Hop', 'Style'] as $style)
-                     <div class="item">
+
+                  @php
+                    $images = [
+                        'Rock' => 'img-1.png',
+                        'Hip Hop' => 'img-2.png',
+                        'Style' => 'img-3.webp', // Make sure this image exists
+                    ];
+                @endphp
+
+                @foreach(['Rock', 'Hip Hop', 'Style', 'Rock', 'Rock', 'Hip Hop', 'Style'] as $style)
+                    <div class="item">
                         <div class="image_box">
-                           <img src="{{ asset('P/Profusion-1.0.0/images/img-' . ($loop->index % 2 + 1) . '.png') }}" alt="#" />
+                            <img src="{{ asset('P/Profusion-1.0.0/images/' . ($images[$style] ?? 'img-1.png')) }}" alt="{{ $style }} Dance" />
                         </div>
                         <h3 class="sound_text">{{ $style }} <br> Dance</h3>
                         <div class="buy_bt"><a href="#">Read More</a></div>
-                     </div>
-                  @endforeach
+                    </div>
+                @endforeach
+
                </div>
             </div>
          </div>
