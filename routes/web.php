@@ -23,3 +23,12 @@ Route::get('/services', function () {
 Route::get('/client', function () {
     return view('client');
 });
+
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::post('/contact', function () {
+    // handle form submission here
+})->name('contact.submit');;
