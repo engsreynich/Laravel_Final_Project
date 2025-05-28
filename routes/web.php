@@ -2,6 +2,7 @@
 
 // routes/web.php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TutorController;
 
 Route::get('/', function () {
     return view('pages.index');
@@ -26,3 +27,15 @@ Route::get('/contact', function () {
 Route::post('/contact', function () {
     return redirect()->route('contact')->with('success', 'Message sent successfully!');
 })->name('contact.submit');
+
+// Tutor routes
+Route::get('/tutors', [TutorController::class, 'index'])->name('tutors.index');
+Route::get('/tutors/{tutor}', [TutorController::class, 'show'])->name('tutors.show');
+Route::get('/tutors/subject/{subject}', [TutorController::class, 'bySubject'])->name('tutors.by_subject');
+
+// API routes for AJAX requests
+Route::prefix('api')->group(function () {
+    Route::get('/tutors/search', [TutorController::class, 'search'])->name('api.tutors.search');
+    Route::get('/tutors/filter-options', [TutorController::class, 'getFilterOptions'])->name('api.tutors.filter_options');
+    Route::get('/tutors/featured', [TutorController::class, 'featured'])->name('api.tutors.featured');
+});

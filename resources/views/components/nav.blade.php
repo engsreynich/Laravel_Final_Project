@@ -17,6 +17,9 @@
                     <li class="nav-item {{ Route::is('services') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('services') }}">Services</a>
                     </li>
+                    <li class="nav-item {{ Route::is('tutors.*') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('tutors.index') }}">Find Tutors</a>
+                    </li>
                     <li class="nav-item {{ Route::is('client') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('client') }}">Client</a>
                     </li>
@@ -26,7 +29,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <div class="user_icon"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div>
-                    <div class="user_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                    <div class="user_icon"><a href="{{ route('tutors.index') }}"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                 </form>
                 <div class="call_btn">
                     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +1234567890</span></a>
