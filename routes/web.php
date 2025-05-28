@@ -1,34 +1,28 @@
 <?php
 
+// routes/web.php
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/index', function () {
-    return view('index');
-});
-
+    return view('pages.index');
+})->name('home');
 
 Route::get('/about', function () {
-    return view('about');
-});
+    return view('pages.about');
+})->name('about');
 
 Route::get('/services', function () {
-    return view('services');
-});
+    return view('pages.services');
+})->name('services');
 
 Route::get('/client', function () {
-    return view('client');
-});
-
+    return view('pages.client');
+})->name('client');
 
 Route::get('/contact', function () {
-    return view('contact');
-});
+    return view('pages.contact');
+})->name('contact');
 
 Route::post('/contact', function () {
-    // handle form submission here
-})->name('contact.submit');;
+    return redirect()->route('contact')->with('success', 'Message sent successfully!');
+})->name('contact.submit');
