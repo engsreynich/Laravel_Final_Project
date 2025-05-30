@@ -1,5 +1,5 @@
 <!-- resources/views/pages/about.blade.php -->
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'About | Profusion')
 

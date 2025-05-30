@@ -3,9 +3,11 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Teacher extends Authenticatable
 {
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'name', 'email', 'password', 'subject', 'available_time', 'price', 'class_type'
+    ];
 
     protected $hidden = ['password'];
 

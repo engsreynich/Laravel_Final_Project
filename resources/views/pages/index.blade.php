@@ -1,5 +1,5 @@
 <!-- resources/views/pages/index.blade.php -->
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'Home | Profusion')
 
@@ -95,7 +95,7 @@
             <div class="price_section_2">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="first_price_text">First Price</h3>
+                        <h3 class="first_price_text">Online Price</h3>
                         <div class="price_box">
                             <div class="taital_main">
                                 <h4 class="rate_text"><span style="color: #f6815e;">$</span>500</h4>
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="first_price_text">Second Price</h3>
+                        <h3 class="first_price_text">Physical Price</h3>
                         <div class="price_box">
                             <div class="taital_main">
                                 <h4 class="rate_text"><span style="color: #f6815e;">$</span>1000</h4>

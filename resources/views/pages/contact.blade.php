@@ -1,5 +1,5 @@
 <!-- resources/views/pages/contact.blade.php -->
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'Contact | Profusion')
 

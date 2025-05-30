@@ -23,6 +23,13 @@
                     <li class="nav-item {{ Route::is('contact') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                     </li>
+                    @auth
+                        @if (auth()->user()->role === 'teacher')
+                            <li class="nav-item {{ Route::is('teacher.courses') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('teacher.courses') }}">Manage Courses</a>
+                            </li>
+                        @endif
+                    @endauth
                 </ul>
                 <div class="form-inline my-2 my-lg-0">
                     @auth

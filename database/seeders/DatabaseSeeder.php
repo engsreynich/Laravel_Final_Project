@@ -1,23 +1,30 @@
 <?php
-
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Teacher;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
+    public function run()
     {
-        // User::factory(10)->create();
+        // Seed a student
+        User::create([
+            'name' => 'Student One',
+            'email' => 'student1@example.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('password123'),
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Seed a teacher
+        Teacher::create([
+            'name' => 'Teacher One',
+            'email' => 'teacher1@example.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('password123'),
+            'subject' => 'Mathematics',
+            'available_time' => 'Mon-Fri 9 AM - 5 PM',
+            'price' => 50.00,
+            'class_type' => 'online',
         ]);
     }
 }
