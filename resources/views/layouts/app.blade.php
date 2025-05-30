@@ -9,8 +9,8 @@
     <style>
         /* Navbar dark background and shadow */
         .navbar {
-            background: #252534; /* dark navy blue */
-            box-shadow: 0 4px 12px rgba(26, 26, 46, 0.8);
+            background: #ffffff; /* dark navy blue */
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.8);
         }
 
         .navbar-brand {
@@ -20,7 +20,7 @@
         }
 
         .navbar-nav .nav-link {
-            color: #f0f0f0;
+            color: #000000;
             font-weight: 600;
             font-size: 1.1rem;
             padding: 0.5rem 1rem;
@@ -36,21 +36,21 @@
         
         /* Search button outline for dark background */
         .btn-outline-info {
-            color: #ffffff;
-            border-color: #ffffff;
+            color: #000000;
+            border-color: #000000;
         }
         .btn-outline-info:hover {
-            background-color: #2b00ff;
-            color: #9999ad;
+            background-color: #201f20;
+            color: #73737b;
             border-color: #1a06f4;
         }
 
         .navbar-nav.ms-3 .nav-link {
-            color: #f0f0f0;
+            color: #000000;
         }
 
         .navbar-nav.ms-3 .nav-link:hover {
-            color: #0010f0 !important;
+            color: #0000fd !important;
         }
 
         /* Footer link hover */
@@ -79,10 +79,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav me-auto">
-                    <a class="nav-link" href="{{ route('services') }}">Services</a>
-                    <a class="nav-link" href="{{ route('about') }}">About</a>
-                    <a class="nav-link" href="{{ route('client') }}">Client</a>
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ route('services') }}" style="color: black;">Services</a>
+                    <a class="nav-link" href="{{ route('about') }}" style="color: black;">About</a>
+                    <a class="nav-link" href="{{ route('client') }}" style="color: black;">Client</a>
+                    <a class="nav-link" href="{{ route('contact') }}" style="color: black;">Contact</a>
+
                 </div>
                 <form class="d-flex" action="{{ route('search') }}" method="GET">
                     <input

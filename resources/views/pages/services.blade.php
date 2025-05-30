@@ -25,11 +25,11 @@
 
         <div class="row g-4">
             @php
-                $classes = ['Mathematics', 'Science', 'Language'];
+                $classes = ['Mathematics', 'Chemistry', 'Physics'];
                 $images = [
                     'Mathematics' => 'https://i.pinimg.com/736x/d0/e9/8d/d0e98da09f6a29fc98ccec165818aaf4.jpg',
-                    'Science' => 'https://i.pinimg.com/736x/d0/2c/3f/d02c3fc164df94b48c05110739ff8b7f.jpg',
-                    'Language' => 'https://i.pinimg.com/736x/cf/5b/77/cf5b773a457a251e60be55a6e59f7a1a.jpg',
+                    'Chemistry' => 'P/Profusion-1.0.0/images/chemistry.jpg',
+                    'Physics' => 'P\Profusion-1.0.0\images\physics.jpg',
                 ];
             @endphp
 
