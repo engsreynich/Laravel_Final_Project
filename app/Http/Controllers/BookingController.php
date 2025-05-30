@@ -22,14 +22,20 @@ class BookingController extends Controller
         return redirect()->back()->with('success', 'Booking successful!');
     }
 
-    public function cancel($bookingId)
-    {
-        $booking = Booking::findOrFail($bookingId);
-        $this->authorize('cancel', $booking);
+   public function cancel($bookingId)
+{
+    $booking = Booking::findOrFail($bookingId);
+    $this->authorize('cancel', $booking);
 
-        $booking->update(['status' => 'cancelled']);
-        return redirect()->back()->with('success', 'Booking cancelled!');
-    }
+    $booking->update(['status' => 'cancelled']);
+
+    // Notify student
+    $booking->user->notify(new BookingCancellation($booking));
+    // Notify teacher
+    $booking->teacher->notify(new BookingCancellation($booking));
+
+    return redirect()->back()->with('success', 'Booking cancelled!');
+}
 
     public function myBookings()
     {

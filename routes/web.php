@@ -2,6 +2,7 @@
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,6 +12,8 @@ Route::get('/', function () {
 
 Route::get('/services', [ClassController::class, 'index'])->name('services');
 Route::get('/classes/{type}', [ClassController::class, 'listTeachers'])->name('classes.teachers');
+
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::middleware(['auth:web', 'role:student'])->group(function () {
     Route::post('/book/{teacherId}', [BookingController::class, 'book'])->name('book');
@@ -37,4 +40,4 @@ Route::get('/contact', function () {
 
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submit'])->name('contact.submit');
 
-Auth::routes();
+Auth::routes(['verify' => true]);

@@ -10,11 +10,17 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">Profusion</a>
-            <div class="navbar-nav">
+            <div class="navbar-nav me-auto">
                 <a class="nav-link" href="{{ route('services') }}">Services</a>
                 <a class="nav-link" href="{{ route('about') }}">About</a>
                 <a class="nav-link" href="{{ route('client') }}">Client</a>
                 <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+            </div>
+            <form class="d-flex" action="{{ route('search') }}" method="GET">
+                <input class="form-control me-2" type="search" name="query" placeholder="Search teachers..." aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+            <div class="navbar-nav ms-3">
                 @if (auth()->guard('web')->check())
                     <a class="nav-link" href="{{ route('my.bookings') }}">My Bookings</a>
                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>

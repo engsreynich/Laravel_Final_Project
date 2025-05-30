@@ -62,4 +62,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function registered(Request $request, $user)
+    {
+        $user->sendEmailVerificationNotification();
+        return redirect($this->redirectPath())->with('status', 'A verification email has been sent to your email address.');
+    }
 }
