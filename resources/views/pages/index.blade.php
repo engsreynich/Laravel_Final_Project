@@ -9,7 +9,7 @@
         width: 90vw;
         height: 100vh;
         overflow: hidden;
-        background-image: url('https://i.pinimg.com/736x/cd/20/ed/cd20ed167fd7256412ca9a4bc00a632f.jpg');
+        background-image: url('https://i.pinimg.com/736x/88/97/2e/88972e15e737a204a0c0b9378c48431b.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -22,14 +22,14 @@
     <!-- Content -->
     <div class="text-center text-white px-3"
          style="position: relative; z-index: 2; max-width: 90vw; animation: fadeInUp 1.2s ease forwards;">
-        <h1 class="display-3 fw-bold mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Start Dance</h1>
+        <h1 class="display-3 fw-bold mb-4" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Start Learning Today</h1>
         <p class="lead mb-4" style="text-shadow: 0 1px 6px rgba(0,0,0,0.6); font-size: 1.25rem;">
-            Discover your passion, learn new moves, and join our vibrant dance community.
+            Unlock your potential with engaging courses, expert guidance, and a community of passionate learners.
         </p>
         <a href="{{ route('contact') }}"
            class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold"
            style="border-width: 2px; transition: background-color 0.3s, color 0.3s;">
-            Read More
+            Learn More
         </a>
     </div>
 </div>

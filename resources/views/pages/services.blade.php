@@ -25,11 +25,11 @@
 
         <div class="row g-4">
             @php
-                $classes = array_unique(['Rock', 'Hip Hop', 'Style']);
+                $classes = ['Mathematics', 'Science', 'Language'];
                 $images = [
-                    'Rock' => 'https://i.pinimg.com/736x/c0/7f/63/c07f63a94327774a350a0f5c757f89a8.jpg',
-                    'Hip Hop' => 'https://i.pinimg.com/736x/d0/f9/f4/d0f9f49dbc505adade2f5d9229410ee0.jpg',
-                    'Style' => 'https://i.pinimg.com/736x/99/02/eb/9902eb261f10fedc7fd9e2bce9edf475.jpg',
+                    'Mathematics' => 'https://i.pinimg.com/736x/d0/e9/8d/d0e98da09f6a29fc98ccec165818aaf4.jpg',
+                    'Science' => 'https://i.pinimg.com/736x/d0/2c/3f/d02c3fc164df94b48c05110739ff8b7f.jpg',
+                    'Language' => 'https://i.pinimg.com/736x/cf/5b/77/cf5b773a457a251e60be55a6e59f7a1a.jpg',
                 ];
             @endphp
 
@@ -37,11 +37,11 @@
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="card border-0 shadow-lg h-100 hover-zoom rounded-4 overflow-hidden">
                         <img src="{{ $images[$class] }}"
-                             alt="{{ $class }} Dance"
+                             alt="{{ $class }} Study"
                              class="card-img-top img-fluid" style="height: 270px; object-fit: cover;">
                         <div class="card-body text-center bg-white">
                             <h5 class="card-title fw-bold text-primary" style="letter-spacing: 0.05em;">
-                                {{ $class }} Dance
+                                {{ $class }}
                             </h5>
                             <a href="#" class="btn btn-outline-primary mt-3 px-4 py-2 rounded-pill fw-semibold btn-hover">
                                 Read More
