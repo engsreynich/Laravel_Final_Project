@@ -1,58 +1,51 @@
-<!-- resources/views/components/nav.blade.php -->
-<div class="header_section">
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('P/Profusion-1.0.0/images/logo.png') }}" alt="Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {{ Route::is('home') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
-                    </li>
-                    <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
-                    </li>
-                    <li class="nav-item {{ Route::is('services') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('services') }}">Services</a>
-                    </li>
-                    <li class="nav-item {{ Route::is('client') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('client') }}">Client</a>
-                    </li>
-                    <li class="nav-item {{ Route::is('contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
-                    </li>
-                </ul>
-                <div class="form-inline my-2 my-lg-0">
-                    @auth
-                        <div class="user_icon">
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{ auth()->user()->name }}</a>
-                        </div>
-                        <div class="user_icon">
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    @else
-                        <div class="user_icon">
-                            <a href="{{ route('login') }}"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
-                        </div>
-                        <div class="user_icon">
-                            <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
-                        </div>
-                    @endauth
-                    <div class="user_icon">
-                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="call_btn">
-                    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +1234567890</span></a>
-                </div>
+<!-- resources/views/components/footer.blade.php -->
+<footer class="text-white pt-5 pb-4" style="background-color: #14375A;">
+    <div class="container text-md-left">
+        <div class="row text-md-left">
+            <!-- Logo and About -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Your Company</h5>
+                <p>
+                    We provide high quality services for clients all around the world.
+                </p>
             </div>
-        </nav>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Quick Links</h5>
+                <p><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></p>
+                <p><a href="{{ route('about') }}" class="text-white text-decoration-none">About</a></p>
+                <p><a href="{{ route('services') }}" class="text-white text-decoration-none">Services</a></p>
+                <p><a href="{{ route('contact') }}" class="text-white text-decoration-none">Contact</a></p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+                <p><i class="fa fa-home mr-3"></i> Phnom Penh, Cambodia</p>
+                <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                <p><i class="fa fa-phone mr-3"></i> +855 12 345 678</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Follow Us</h5>
+                <a class="btn btn-outline-light btn-floating m-1" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <!-- Footer Bottom -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-white">
+                    © {{ now()->year }} Your Company. All Rights Reserved.
+                </p>
+            </div>
+        </div>
     </div>
-</div>
+</footer>

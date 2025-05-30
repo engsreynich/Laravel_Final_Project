@@ -1,59 +1,102 @@
-<!-- resources/views/pages/services.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Services | Profusion')
 
 @section('content')
-    <!-- Services Section Start -->
-    <div class="service_section layout_padding">
-        <div class="container">
-            <h1 class="service_taital">Our Classes</h1>
-            <div class="class_selection" style="text-align: center; margin: 20px 0;">
-                <a href="{{ route('classes.teachers', 'online') }}" class="btn btn0 btn-primary">Online Class</a>
-                <a href="{{ route('classes.teachers', 'physical') }}" class="btn btn-primary" style="margin-left: 10px;">Physical Class</a>
-            </div>
+<!-- Services Section Start -->
+<div class="service_section layout_padding py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-5 fw-bold text-primary" style="font-size: 3rem; letter-spacing: 1.5px; text-transform: uppercase;">
+            Our Classes
+        </h1>
 
-            <div class="service_section_2 layout_padding">
-                <div class="owl-carousel owl-theme">
-                    @php
-                        $images = [
-                            'Rock' => 'img-1.png',
-                            'Hip Hop' => 'img-2.png',
-                            'Style' => 'img-1.png', // Fallback to img-1.png if img-3.webp is missing
-                        ];
-                    @endphp
+        <div class="text-center mb-5">
+            <a href="{{ route('classes.teachers', 'online') }}"
+               class="btn btn-outline-primary me-3 px-5 py-3 fw-semibold rounded-pill shadow-sm"
+               style="transition: all 0.3s ease;">
+                Online Class
+            </a>
+            <a href="{{ route('classes.teachers', 'physical') }}"
+               class="btn btn-primary px-5 py-3 fw-semibold rounded-pill shadow-sm"
+               style="transition: all 0.3s ease;">
+                Physical Class
+            </a>
+        </div>
 
-                    @foreach(['Rock', 'Hip Hop', 'Style', 'Rock', 'Rock', 'Hip Hop', 'Style'] as $style)
-                        <div class="item">
-                            <div class="image_box">
-                                <img src="{{ asset('P/Profusion-1.0.0/images/' . ($images[$style] ?? 'img-1.png')) }}" alt="{{ $style }} Dance" />
-                            </div>
-                            <h3 class="sound_text">{{ $style }} <br>Dance</h3>
-                            <div class="buy_bt"><a href="#">Read More</a></div>
+        <div class="row g-4">
+            @php
+                $classes = array_unique(['Rock', 'Hip Hop', 'Style']);
+                $images = [
+                    'Rock' => 'https://i.pinimg.com/736x/c0/7f/63/c07f63a94327774a350a0f5c757f89a8.jpg',
+                    'Hip Hop' => 'https://i.pinimg.com/736x/d0/f9/f4/d0f9f49dbc505adade2f5d9229410ee0.jpg',
+                    'Style' => 'https://i.pinimg.com/736x/99/02/eb/9902eb261f10fedc7fd9e2bce9edf475.jpg',
+                ];
+            @endphp
+
+            @foreach($classes as $class)
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-lg h-100 hover-zoom rounded-4 overflow-hidden">
+                        <img src="{{ $images[$class] }}"
+                             alt="{{ $class }} Dance"
+                             class="card-img-top img-fluid" style="height: 270px; object-fit: cover;">
+                        <div class="card-body text-center bg-white">
+                            <h5 class="card-title fw-bold text-primary" style="letter-spacing: 0.05em;">
+                                {{ $class }} Dance
+                            </h5>
+                            <a href="#" class="btn btn-outline-primary mt-3 px-4 py-2 rounded-pill fw-semibold btn-hover">
+                                Read More
+                            </a>
                         </div>
-                    @endforeach
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    <!-- Services Section End -->
+</div>
+<!-- Services Section End -->
+@endsection
+
+@section('styles')
+<style>
+    /* Card hover zoom effect */
+    .hover-zoom:hover img {
+        transform: scale(1.08);
+        transition: transform 0.4s ease;
+    }
+
+    .hover-zoom {
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .hover-zoom:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        transform: translateY(-10px);
+    }
+
+    /* Button hover effect */
+    .btn-hover {
+        border-width: 2px;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-hover:hover {
+        background-color: #0d6efd;
+        color: white !important;
+        border-color: #0d6efd !important;
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.5);
+        text-decoration: none;
+    }
+
+    /* Responsive heading */
+    @media (max-width: 576px) {
+        h1.text-center {
+            font-size: 2.2rem !important;
+        }
+    }
+</style>
 @endsection
 
 @section('scripts')
-    <script>
-        $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 35,
-                nav: true,
-                center: true,
-                responsive: {
-                    0: { items: 1, margin: 0 },
-                    575: { items: 1, margin: 0 },
-                    768: { items: 3, margin: 0 },
-                    1000: { items: 3 }
-                }
-            });
-        });
-    </script>
+<!-- No additional scripts needed -->
 @endsection
