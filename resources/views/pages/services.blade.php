@@ -25,20 +25,26 @@
 
         <div class="row g-4">
             @php
-                $classes = ['Mathematics', 'Chemistry', 'Physics'];
+                $classes = ['Mathematics', 'Chemistry', 'Physics', 'History', 'Khmer', 'English'];
                 $images = [
-                    'Mathematics' => 'https://i.pinimg.com/736x/d0/e9/8d/d0e98da09f6a29fc98ccec165818aaf4.jpg',
-                    'Chemistry' => 'P/Profusion-1.0.0/images/chemistry.jpg',
-                    'Physics' => 'P\Profusion-1.0.0\images\physics.jpg',
+                    'Mathematics' => 'P/Profusion-1.0.0/images/math.webp',
+                    'Chemistry' => 'P/Profusion-1.0.0/images/chemistry.png',
+                    'Physics' => 'P/Profusion-1.0.0/images/physics.jpg',
+                    'History' => 'P/Profusion-1.0.0/images/history.jpg',
+                    'Khmer' => 'P/Profusion-1.0.0/images/khmer.jpg',
+                    'English' => 'P/Profusion-1.0.0/images/english.jpg',
+                    'Biology' => 'P/Profusion-1.0.0/images/biology.jpg',
                 ];
             @endphp
 
             @foreach($classes as $class)
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="card border-0 shadow-lg h-100 hover-zoom rounded-4 overflow-hidden">
-                        <img src="{{ $images[$class] }}"
-                             alt="{{ $class }} Study"
-                             class="card-img-top img-fluid" style="height: 270px; object-fit: cover;">
+                        <div class="image-container" style="height: 270px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                            <img src="{{ $images[$class] }}"
+                                 alt="{{ $class }} Study"
+                                 class="card-img-top img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        </div>
                         <div class="card-body text-center bg-white">
                             <h5 class="card-title fw-bold text-primary" style="letter-spacing: 0.05em;">
                                 {{ $class }}
@@ -51,6 +57,27 @@
                 </div>
             @endforeach
         </div>
+
+        <!-- Centered Biology Card -->
+        <div class="row g-4 justify-content-center mt-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-lg h-100 hover-zoom rounded-4 overflow-hidden">
+                    <div class="image-container" style="height: 270px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                        <img src="{{ $images['Biology'] }}"
+                             alt="Biology Study"
+                             class="card-img-top img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body text-center bg-white">
+                        <h5 class="card-title fw-bold text-primary" style="letter-spacing: 0.05em;">
+                            Biology
+                        </h5>
+                        <a href="#" class="btn btn-outline-primary mt-3 px-4 py-2 rounded-pill fw-semibold btn-hover">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Services Section End -->
@@ -59,7 +86,7 @@
 @section('styles')
 <style>
     /* Card hover zoom effect */
-    .hover-zoom:hover img {
+    .hover-zoom:hover .image-container img {
         transform: scale(1.08);
         transition: transform 0.4s ease;
     }

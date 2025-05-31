@@ -32,8 +32,7 @@
          style="position: relative; z-index: 2; max-width: 90vw; animation: fadeInUp 1.2s ease forwards; padding-bottom: 5rem;">
         <h1 class="display-3 fw-bold mb-4" style="text-shadow: 0 2px 5px rgba(255,255,255,0.4); color: white">Start Learning Today</h1>
         <p class="lead mb-4" style="text-shadow: 0 1px 4px rgba(255, 255, 255, 0.4); font-size: 1.25rem; color: white;">
-            Unlock your potential with engaging courses, expert guidance, and a community of passionate learners.
-        </p>
+            Ignite your Grade 12 success with dynamic courses, expert tutors, and a vibrant community, all tailored to ace your national exam!        </p>
         <a href="{{ route('contact') }}"
            class="btn btn-dark btn-lg px-5 py-3 fw-semibold"
            style="border-width: 2px; transition: background-color 0.1s, color 0.1s;">
@@ -62,17 +61,17 @@
 
 <!-- Tackling the Problem Section -->
 <div class="problem-section py-5 text-center">
-    <h2 class="mb-4">Tackling the Problem</h2>
+    <h2 class="mb-4">Tackling the Problem</h2><br>
     <div class="d-flex align-items-start mb-4">
         <img src="P\Profusion-1.0.0\images\student.jpg" alt="Students Collaborating" style="max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-right: 2rem;">
         <p class="mx-auto" style="max-width: 500px; text-align: left;">
-            In today’s fast-paced world, students often face significant barriers to quality education, from high tutoring costs to limited access to personalized learning. Many struggle to keep up with schoolwork, especially in subjects like Math, Science, and English, due to a lack of tailored support. At Profusion, we bridge this gap by connecting students aged 7 to 13 with experienced high school and college tutors worldwide, offering affordable and flexible online tutoring sessions.
-        </p>
+                        Empowering Grade 12 Success In today’s high-stakes academic world, Grade 12 students face intense pressure to excel in national exams, often hindered by costly tutoring and limited access to personalized guidance. Many struggle with key subjects like Math, Science, and English without the right support. At Profusion, we break down these barriers by connecting Grade 12 students with expert high school and college tutors worldwide, delivering affordable, flexible, and tailored online tutoring to ensure exam-ready confidence.
+            </p>
     </div>
     <br>
     <div class="d-flex align-items-start">
         <p class="mx-auto" style="max-width: 500px; text-align: left; margin-right: 2rem;">
-            Our platform ensures that every student receives the attention they need to thrive, with tutors who are not only subject matter experts but also mentors who inspire confidence and a love for learning. By leveraging technology, we make education accessible, inclusive, and engaging, supporting the UN’s Development Goal 4 of “ensuring inclusive and equitable quality education and promoting lifelong learning opportunities for all.”
+            Our platform empowers every Cambodian Grade 12 student to excel in national exams by providing personalized attention from expert tutors who are both subject specialists and inspiring mentors, fostering confidence and a passion for learning. Through cutting-edge technology, Profusion delivers accessible, inclusive, and engaging online tutoring.
         </p>
         <img src="P\Profusion-1.0.0\images\teacher.webp" alt="Tutor Teaching" style="max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
     </div>

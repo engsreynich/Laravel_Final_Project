@@ -41,3 +41,7 @@ Route::get('/contact', function () {
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submit'])->name('contact.submit');
 
 Auth::routes(['verify' => true]);
+
+
+
+//

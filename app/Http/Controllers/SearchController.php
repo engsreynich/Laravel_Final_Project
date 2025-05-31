@@ -13,11 +13,13 @@ class SearchController extends Controller
 
         $teachers = Teacher::query()
             ->when($query, function ($q) use ($query) {
-                return $q->where('name', 'LIKE', "%{$query}%")
-                         ->orWhere('subject', 'LIKE', "%{$query}%");
+                $q->where(function ($q2) use ($query) {
+                    $q2->where('name', 'LIKE', "%{$query}%")
+                       ->orWhere('subject', 'LIKE', "%{$query}%");
+                });
             })
             ->when($class_type, function ($q) use ($class_type) {
-                return $q->where('class_type', $class_type);
+                $q->where('class_type', $class_type);
             })
             ->get();
 

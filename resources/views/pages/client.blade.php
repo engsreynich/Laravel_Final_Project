@@ -34,6 +34,17 @@
     .bg-gradient-light {
         background: linear-gradient(135deg, #8d969f 0%, #727679 100%);
     }
+
+    /* Make all teacher images consistent size & shape */
+    .teacher-card img.rounded-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        overflow: hidden;
+    }
 </style>
 @endsection
 
@@ -80,7 +91,7 @@
                             <div class="col-md-10 col-lg-8">
                                 <div class="card teacher-card border-0 shadow-sm rounded-4 p-5 bg-white text-center">
                                     <img src="{{ asset($teacher['image']) }}"
-                                         class="rounded-circle mx-auto mb-4" width="110" height="110" alt="{{ $teacher['name'] }}">
+                                         class="rounded-circle mx-auto mb-4" width="200" height="200" alt="{{ $teacher['name'] }}">
                                     <h4 class="fw-bold mb-1 text-primary">{{ $teacher['name'] }}</h4>
                                     <p class="text-muted mb-3 fst-italic">{{ $teacher['subject'] }}</p>
                                     <p class="text-secondary fst-italic fs-5">"{{ $teacher['quote'] }}"</p>
